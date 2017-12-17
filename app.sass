@@ -1,49 +1,67 @@
 /*hello*/
 
 //variables
-$black: #333
+$lightgreen: hsl(80, 50%, 50%)
+$darkgreen: hsl(80, 60%, 20%)
+$middlegreen: hsl(80, 90%, 40%)
 //mixins
 
 
 //styles
 body
-    background: blue
-    color: $black
     z-index: 0
+    background: $darkgreen !important
     
 header
-    background-color: hsl(80, 50%, 50%)
+    background-color: $lightgreen
     font-size: 40px
-    position: sticky !important
     top: 0
-    color: hsl(80, 60%, 20%) !important
+    color: $darkgreen !important
+    height: 60px
+    border-radius: 15px
 
 nav
-    border: solid white
+    border: solid $lightgreen
     font-size: 30px
-    background-color: hsl(80, 60%, 20%) !important
+    background-color: $darkgreen !important
     height: 60px
+    border-radius: 15em
+    position: sticky !important
+    top: 0px
+    z-index: 9
 nav
     li
         margin: 2px 20px
+.container
+    height: 100vh
+    background: $lightgreen
+    border: solid $middlegreen !important
+//about
+
+#about
+    img
+        border: solid black
+        padding: 0 
+        height: auto
+        
+
 a
     z-index: 10
     text-decoration: none !important
     transition: all 0.5s
-    // color: hsl(80, 50%, 50%) 
 .initial-color
         color: hsl(80, 50%, 50%) !important
 
 .inverse-color
-    color: hsl(80, 60%, 20%) !important
-
+    color: $darkgreen !important
 
 .background
     transition: all 0.4s
-    position: absolute
-    top: 0
+    position: absolute !important
+    top: 0px
     // background: white 1px !important
     left: 0
-    z-index: 1
+    z-index: 10
     display: block
-    opacity: 0.6
+    opacity: 0.4
+    border-radius: 5em

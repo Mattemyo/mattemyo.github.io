@@ -1,24 +1,38 @@
 /*hello */
 body {
-  background: blue;
-  color: #333;
-  z-index: 0; }
+  z-index: 0;
+  background: #3d5214 !important; }
 
 header {
   background-color: #95bf40;
   font-size: 40px;
-  position: sticky !important;
   top: 0;
-  color: #3d5214 !important; }
+  color: #3d5214 !important;
+  height: 60px;
+  border-radius: 15px; }
 
 nav {
-  border: solid white;
+  border: solid #95bf40;
   font-size: 30px;
   background-color: #3d5214 !important;
-  height: 60px; }
+  height: 60px;
+  border-radius: 15em;
+  position: sticky !important;
+  top: 0px;
+  z-index: 9; }
 
 nav li {
   margin: 2px 20px; }
+
+.container {
+  height: 100vh;
+  background: #95bf40;
+  border: solid #85c20a !important; }
+
+#about img {
+  border: solid black;
+  padding: 0;
+  height: auto; }
 
 a {
   z-index: 10;
@@ -33,11 +47,12 @@ a {
 
 .background {
   transition: all 0.4s;
-  position: absolute;
-  top: 0;
+  position: absolute !important;
+  top: 0px;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   display: block;
-  opacity: 0.6; }
+  opacity: 0.4;
+  border-radius: 5em; }
 
 /*# sourceMappingURL=styles.css.map */
