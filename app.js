@@ -43,7 +43,13 @@ $(function () {
 //about
 
 
-//big Images
-$('.bigImg').addClass('col-12');
+//big Images slides
+let index = 0;
+startSlides();
+function startSlides(){
+
+    
+
+}
 
 });
