@@ -1,0 +1,24 @@
+/*hello*/
+body {
+  background: blue;
+  color: #333;
+}
+
+header {
+  background-color: #95bf40;
+  height: auto;
+  font-size: 40px;
+  position: sticky !important;
+}
+
+nav {
+  border: solid black;
+  font-size: 30px;
+}
+
+ul {
+  background-color: #3d5214 !important;
+}
+ 
+
+ /*# sourceMappingURL= app.css.map */
