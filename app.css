@@ -1,23 +1,89 @@
 /*hello*/
 body {
-  background: blue;
-  color: #333;
+  z-index: 0;
+  background: #3d5214 !important;
 }
 
 header {
   background-color: #95bf40;
-  height: auto;
   font-size: 40px;
-  position: sticky !important;
+  top: 0;
+  color: #3d5214 !important;
+  height: 60px;
+  border-radius: 15px;
 }
 
 nav {
-  border: solid black;
+  border: solid #95bf40;
   font-size: 30px;
+  background-color: #3d5214 !important;
+  height: 60px;
+  border-radius: 15em;
+  position: sticky !important;
+  top: 0px;
+  z-index: 9;
 }
 
-ul {
-  background-color: #3d5214 !important;
+nav li {
+  margin: 2px 20px;
+}
+
+.container {
+  height: 100vh;
+  background: #95bf40;
+  border: solid #85c20a !important;
+}
+
+#slideshow {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  overflow: hidden;
+  height: 350px;
+}
+
+.bigImg {
+  width: 100% !important;
+}
+
+.fade {
+  animation: fade 1.5s infinite;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  z-index: 10;
+  text-decoration: none !important;
+  transition: all 0.5s;
+}
+
+.initial-color {
+  color: #95bf40 !important;
+}
+
+.inverse-color {
+  color: #3d5214 !important;
+}
+
+.background {
+  transition: all 0.4s;
+  position: absolute !important;
+  top: 0px;
+  left: 0;
+  z-index: 10;
+  display: block;
+  opacity: 0.4;
+  border-radius: 5em;
 }
  
 

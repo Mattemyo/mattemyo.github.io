@@ -33,8 +33,24 @@ nav li {
   overflow: hidden;
   position: relative; }
 
+#slideshow {
+  overflow: hidden;
+  height: 350px; }
+
+#slideshow figure div {
+  width: 20% !important;
+  float: left; }
+
 .bigImg {
-  width: 100% !important; }
+  width: 100% !important;
+  float: left; }
+
+#slideshow figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  transition: all 3s cubic-bezier(0.55, -0.34, 0.39, 1.43); }
 
 .fade {
   animation: fade 1.5s infinite; }

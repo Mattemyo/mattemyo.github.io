@@ -1,4 +1,5 @@
 /*hello*/
+//NEXT: add real pictures and make slideshow prettier
 
 //variables
 $lightgreen: hsl(80, 50%, 50%)
@@ -38,15 +39,44 @@ nav
     border: solid $middlegreen !important
 //about
 
-#about
 #slideshow
     overflow: hidden
     position: relative
     
-.slider
+#slideshow
     // display: none
+    overflow: hidden
+    height: 350px
+
+#slideshow
+    figure
+        div
+            width: 20% !important
+            float: left
+
+    
 .bigImg
     width: 100% !important
+    float: left
+
+#slideshow
+    figure
+        position: relative
+        width: 500%
+        margin: 0
+        left: 0
+        // animation: 0.2s sliding infinite
+        transition: all 3s cubic-bezier(.55, -0.34, .39, 1.43)
+
+
+// @keyframes sliding
+//     0%
+//         left: 0%
+//     10%
+//         left: 0%
+//     100%
+//         left: -100%
+    
     
 
 
