@@ -32,12 +32,9 @@ $(function() {
     //change font color of a
     $(this).css("color", "$darkgreen !important");
   }
-  function getInitialClass() {
-    $("a").removeClass();
-    $("a").addClass("initial-color");
-  }
+ 
   $hovered.mouseover(changeBackground);
-
+//TODO: scrollY. add class sticky
   //make span sticky just as navbar
 
   //about

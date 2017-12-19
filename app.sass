@@ -1,10 +1,11 @@
 /*hello*/
-//NEXT: add real pictures and make slideshow prettier
+//TODO: add real pictures and make slideshow prettier
 
 //variables
 $lightgreen: hsl(80, 50%, 50%)
 $darkgreen: hsl(80, 60%, 20%)
 $middlegreen: hsl(80, 90%, 40%)
+$newgreen: hsl(80, 90%, 30%)
 //mixins
 
 
@@ -33,51 +34,72 @@ nav
 nav
     li
         margin: 2px 20px
+        z-index: 200000 !important
+
 .container
     height: 100vh
     background: $lightgreen
     border: solid $middlegreen !important
+    display: flex
+    align-items: center
+
 //about
+
 
 #slideshow
     overflow: hidden
     position: relative
+    height: 60vh
+    width: 50%
+    border: solid green
+    border-radius: 50px
+    top: -5% !important
+#about
+    p
+        width: 50%
+
     
-#slideshow
-    // display: none
-    overflow: hidden
-    height: 350px
 
 #slideshow
     figure
         div
             width: 20% !important
             float: left
-
-    
-.bigImg
-    width: 100% !important
-    float: left
+            height: 100%
 
 #slideshow
     figure
         position: relative
         width: 500%
+        height: 100%
         margin: 0
         left: 0
-        // animation: 0.2s sliding infinite
         transition: all 3s cubic-bezier(.55, -0.34, .39, 1.43)
+.bigImg
+    height: 80% !important
+    width: 100% !important
+    float: left
+    border: $middlegreen solid
+    border-top-left-radius: 46px
+    border-top-right-radius: 46px
+
+.slide
+    p
+        border: solid $darkgreen !important
+        width: 20%
+        background: $newgreen
+        border-bottom-left-radius: 46px
+        border-bottom-right-radius: 46px
+        height: 20% !important
+        position: absolute
+        bottom: -1rem !important
+
+//Projects
+#fcc
+    text-align: center
 
 
-// @keyframes sliding
-//     0%
-//         left: 0%
-//     10%
-//         left: 0%
-//     100%
-//         left: -100%
-    
-    
+
 
 
 
@@ -93,7 +115,7 @@ nav
         opacity: 1
 
 a
-    z-index: 10
+    z-index: 100
     text-decoration: none !important
     transition: all 0.5s
 .initial-color
@@ -106,9 +128,10 @@ a
     transition: all 0.4s
     position: absolute !important
     top: 0px
-    // background: white 1px !important
     left: 0
     z-index: 10
     display: block
     opacity: 0.4
     border-radius: 5em
+
+
