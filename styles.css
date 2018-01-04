@@ -1,7 +1,8 @@
 /*hello */
 body {
-  z-index: 0;
-  background: #3d5214 !important; }
+  background: #3d5214 !important;
+}
+
 
 header {
   background-color: #95bf40;
@@ -9,7 +10,8 @@ header {
   top: 0;
   color: #3d5214 !important;
   height: 60px;
-  border-radius: 15px; }
+  border-radius: 15px;
+}
 
 nav {
   border: solid #95bf40;
@@ -19,35 +21,42 @@ nav {
   border-radius: 15em;
   position: sticky !important;
   top: 0px;
-  z-index: 9; }
+  z-index: 20;
+}
 
 nav li {
   margin: 2px 20px;
-  z-index: 200000 !important; }
+  cursor: pointer;
+}
+
+nav ul {
+  z-index: 200;
+}
 
 .container {
   height: 100vh;
   background: #95bf40;
   border: solid #85c20a !important;
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
 #slideshow {
   overflow: hidden;
   position: relative;
   height: 60vh;
-  width: 50%;
+  /* width: 50%; */
   border: solid green;
   border-radius: 50px;
-  top: -5% !important; }
-
-#about p {
-  width: 50%; }
+  top: -5% !important;
+  padding: 0;
+}
 
 #slideshow figure div {
   width: 20% !important;
   float: left;
-  height: 100%; }
+  height: 100%;
+}
 
 #slideshow figure {
   position: relative;
@@ -55,7 +64,8 @@ nav li {
   height: 100%;
   margin: 0;
   left: 0;
-  transition: all 3s cubic-bezier(0.55, -0.34, 0.39, 1.43); }
+  transition: all 3s cubic-bezier(0.55, -0.34, 0.39, 1.43);
+}
 
 .bigImg {
   height: 80% !important;
@@ -63,7 +73,8 @@ nav li {
   float: left;
   border: #85c20a solid;
   border-top-left-radius: 46px;
-  border-top-right-radius: 46px; }
+  border-top-right-radius: 46px;
+}
 
 .slide p {
   border: solid #3d5214 !important;
@@ -73,38 +84,47 @@ nav li {
   border-bottom-right-radius: 46px;
   height: 20% !important;
   position: absolute;
-  bottom: -1rem !important; }
+  bottom: -1rem !important;
+}
 
 #fcc {
-  text-align: center; }
+  text-align: center;
+}
 
 .fade {
-  animation: fade 1.5s infinite; }
+  animation: fade 1.5s infinite;
+}
 
 @keyframes fade {
   from {
-    opacity: 0.4; }
+    opacity: 0.4;
+  }
   to {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 a {
-  z-index: 100;
   text-decoration: none !important;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+}
 
 .initial-color {
-  color: #95bf40 !important; }
+  color: #95bf40 !important;
+}
 
 .inverse-color {
-  color: #3d5214 !important; }
+  color: #3d5214 !important;
+}
 
 .background {
-  transition: all 0.4s;
+  transition: all 1s;
   position: absolute !important;
   top: 0px;
   left: 0;
-  z-index: 10;
   display: block;
+  border-radius: 5em;
+  z-index: 0;
+  border: solid #639108;
+  background: #85c20a !important;
   opacity: 0.4;
-  border-radius: 5em; }
-
-/*# sourceMappingURL=styles.css.map */
+}
