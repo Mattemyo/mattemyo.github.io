@@ -1,8 +1,7 @@
-/*hello */
+/* hello */
 body {
   background: #3d5214 !important;
 }
-
 
 header {
   background-color: #95bf40;
@@ -37,8 +36,15 @@ nav ul {
   height: 100vh;
   background: #95bf40;
   border: solid #85c20a !important;
-  display: flex;
+  display: block;
   align-items: center;
+  color: #3d5214;
+  height: auto;
+  padding: 20px 20px !important;
+}
+/* TODO: ADD TO KEYFRAMES */
+#projects {
+  padding: 20px 80px !important;
 }
 
 #slideshow {
@@ -46,7 +52,7 @@ nav ul {
   position: relative;
   height: 60vh;
   /* width: 50%; */
-  border: solid green;
+  /* border: solid green; */
   border-radius: 50px;
   top: -5% !important;
   padding: 0;
@@ -127,4 +133,52 @@ a {
   border: solid #639108;
   background: #85c20a !important;
   opacity: 0.4;
+}
+
+.row {
+  flex: 5;
+}
+#abbe {
+  padding-top: 10px;
+}
+.spacer {
+  height: 40px;
+}
+
+/* Flaired edges, by Tomas Theunissen */
+i {
+  z-index: 20;
+  color: black;
+}
+#horizon1,
+#horizon2 {
+  overflow: visible;
+  /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: #3d5214 !important;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  width: 50%;
+}
+div.show {
+  border: solid black 6px;
+  border-radius: 2%;
+  padding: 0;
+  margin: 1px;
+  display: float;
+}
+
+#horizon1::before,
+#horizon2:before {
+  /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #3d5214;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+  z-index: 500;
 }
