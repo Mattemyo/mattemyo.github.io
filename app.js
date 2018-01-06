@@ -46,15 +46,15 @@ $(function() {
     figure.style.transform = `translateX(${total}%)`;
   }, 5000);
 
-
   //ADD NICE SCROLL
+
   $("ul a").on("click", function(e) {
     e.preventDefault();
     $("html, body").stop();
     //href in navbar refers to id of container
     const id = $(this).attr("href");
     //position of container
-    const finishOffset = $(id).offset().top - 60;
+    const finishOffset = $(id).offset().top - 42;
     //offset of current window
     const windowOffset = $(window).scrollTop();
     //speed depends on distance between current and final position
@@ -62,28 +62,20 @@ $(function() {
 
     let bounce;
     let same = 0;
+    let adj = 0;
     if (diff < 200) {
-      bounce = 5;
+      bounce = 0;
       same = 300;
     } else if (windowOffset < finishOffset) {
       bounce = 10;
     } else {
-      bounce = -10;
+      bounce = -30;
+      adj = 40;
     }
 
     console.log(finishOffset);
     $("html, body")
-      .animate(
-        {
-          scrollTop: finishOffset + bounce
-        },
-        diff * 2 + same
-      )
-      .animate(
-        {
-          scrollTop: finishOffset - bounce
-        },
-        diff + same / 2
-      );
+      .animate({ scrollTop: finishOffset + bounce }, diff * 2 + same)
+      .animate({ scrollTop: finishOffset - bounce - adj }, diff + same / 2);
   });
 });
