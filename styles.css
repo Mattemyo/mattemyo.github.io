@@ -35,7 +35,7 @@ nav {
   z-index: 20;
   box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px -3px;
 }
-p{
+p {
   font-weight: 300;
 }
 
@@ -66,9 +66,11 @@ nav ul {
   width: 80%;
   background: #009bc0;
   color: white;
+  outline: 0;
 }
 #buttons button:hover {
   transform: scale(1.1);
+  background: #027997;
 }
 #buttons div {
   padding: 0;
@@ -165,6 +167,10 @@ nav a {
   text-decoration: none !important;
   transition: all 0.5s;
 }
+button {
+  cursor: pointer;
+  outline: none;
+}
 
 .initial-color {
   color: #95bf40 !important;
@@ -184,7 +190,7 @@ nav a {
   border-bottom-right-radius: 15px;
   z-index: 0;
   background: #134e5e !important;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .row {
