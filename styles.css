@@ -1,19 +1,15 @@
 /* hello */
+
 * {
   box-sizing: border-box;
+  transform: translate3d(0, 0, 0);
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   /* Ciada Stripes by Randy Merrill */
   background-color: #026873 !important;
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.07) 50%,
-      transparent 50%
-    ),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
-    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
-    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
+  background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
   background-size: 13px, 29px, 37px, 53px;
 }
 
@@ -39,6 +35,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px -3px;
   width: 100%;
 }
+
 p {
   font-weight: 300;
 }
@@ -89,6 +86,7 @@ nav ul {
   border-bottom: solid #06727e 2.5px;
   border-radius: 12px !important;
 }
+
 #all {
   padding: 0% !important;
   border-radius: 0;
@@ -97,12 +95,17 @@ nav ul {
   opacity: 0.97;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 0 5px 1px;
 }
+
+
 /* TODO: ADD TO KEYFRAMES */
+
 #projects {
   padding: 20px 80px !important;
 }
 
+
 /*  ============ SLIDESHOW ============= */
+
 #slideshow {
   overflow: hidden;
   position: relative;
@@ -156,7 +159,9 @@ nav ul {
   animation: fade 1.5s infinite;
 }
 
+
 /* ========= KEYFRAMES ============ */
+
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -165,10 +170,12 @@ nav ul {
     opacity: 1;
   }
 }
+
 nav a {
   text-decoration: none !important;
   transition: all 0.5s;
 }
+
 button {
   cursor: pointer;
   outline: none;
@@ -198,9 +205,11 @@ button {
 .row {
   flex: 5;
 }
+
 #abbe {
   padding-top: 10px;
 }
+
 .spacer {
   height: 40px;
 }
@@ -208,7 +217,10 @@ button {
 i.fa-linkedin-square {
   color: black;
 }
+
+
 /* Flaired edges, by Tomas Theunissen */
+
 #horizon1,
 #horizon2,
 #horizon3 {
@@ -244,6 +256,7 @@ div.show {
   border-radius: 20px;
   z-index: 500;
 }
+
 div.holder {
   background: rgba(30, 100, 200, 0.2);
   box-shadow: 1px 1px 1px 1px rgba(5, 24, 2, 0.05);
@@ -252,6 +265,7 @@ div.holder {
   margin: 15px auto;
   backface-visibility: hidden;
 }
+
 div.holder a {
   text-decoration: none;
   color: white;
@@ -261,10 +275,12 @@ div.holder:hover {
   box-shadow: 1px 1px 2px 1px rgba(5, 24, 2, 0);
   transform: scale(1.02) translateZ(0);
 }
+
 div.holder:hover h2 {
   text-shadow: 1px 1px 1px #000;
   font-size: 32px;
 }
+
 div.holder:hover p {
   text-shadow: 1px 1px 10px #000;
   font-size: 16px;
@@ -275,17 +291,21 @@ div.li-profile {
   width: 100%;
   margin: 0 auto;
 }
+
 div.li-profile img {
   margin: 20px;
   width: 100px;
   height: 100px;
   border-radius: 100%;
 }
+
 div.li-profile h2 {
   line-height: 80px;
 }
 
+
 /* TODO: GIVE BORDERS TO BUTTONS */
+
 @media screen and (max-width: 680px) {
   div.container-outer {
     border: solid black 2px;
@@ -293,10 +313,11 @@ div.li-profile h2 {
     margin: auto;
   }
 }
+
 @media screen and (max-width: 450px) {
   nav {
-    height: 40px;
     width: 100vw;
+    line-height: 50px;
   }
   #all {
     width: 100vw;
@@ -320,7 +341,7 @@ div.li-profile h2 {
   }
   nav ul.nav.navbarnav a[href="#projects"] {
     width: 35%;
-    margin: 0 auto;
+    margin-left: 5%;
   }
   nav ul.nav.navbarnav a[href="#contact"] {
     width: 32%;
