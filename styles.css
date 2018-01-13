@@ -1,4 +1,7 @@
 /* hello */
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Montserrat", sans-serif;
   /* Ciada Stripes by Randy Merrill */
@@ -34,6 +37,7 @@ nav {
   top: 0px;
   z-index: 20;
   box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px -3px;
+  width: 100%;
 }
 p {
   font-weight: 300;
@@ -47,13 +51,10 @@ nav li {
   opacity: 0.8;
   font-weight: 300;
 }
+
 #contact {
   height: 100vh;
   padding: 30%;
-}
-
-#buttons {
-  margin-top: 20% !important;
 }
 
 nav ul {
@@ -63,15 +64,14 @@ nav ul {
 
 #buttons button {
   font-size: 18px;
-  width: 80%;
+  width: 100%;
   background: #009bc0;
   color: white;
   outline: 0;
+  border-radius: 0 0 5px 5px;
+  text-shadow: 0px 1px 2px #000;
 }
-#buttons button:hover {
-  transform: scale(1.1);
-  background: #027997;
-}
+
 #buttons div {
   padding: 0;
 }
@@ -102,6 +102,7 @@ nav ul {
   padding: 20px 80px !important;
 }
 
+/*  ============ SLIDESHOW ============= */
 #slideshow {
   overflow: hidden;
   position: relative;
@@ -155,6 +156,7 @@ nav ul {
   animation: fade 1.5s infinite;
 }
 
+/* ========= KEYFRAMES ============ */
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -241,4 +243,87 @@ div.show {
   border-width: 0 0 1px 0;
   border-radius: 20px;
   z-index: 500;
+}
+div.holder {
+  background: rgba(30, 100, 200, 0.2);
+  box-shadow: 1px 1px 1px 1px rgba(5, 24, 2, 0.05);
+  width: 80%;
+  transition: all 0.2s cubic-bezier(0.5, 1.2, 0.5, 1);
+  margin: 15px auto;
+  backface-visibility: hidden;
+}
+div.holder a {
+  text-decoration: none;
+  color: white;
+}
+
+div.holder:hover {
+  box-shadow: 1px 1px 2px 1px rgba(5, 24, 2, 0);
+  transform: scale(1.02) translateZ(0);
+}
+div.holder:hover h2 {
+  text-shadow: 1px 1px 1px #000;
+  font-size: 32px;
+}
+div.holder:hover p {
+  text-shadow: 1px 1px 10px #000;
+  font-size: 16px;
+}
+
+div.li-profile {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+div.li-profile img {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+div.li-profile h2 {
+  line-height: 80px;
+}
+
+/* TODO: GIVE BORDERS TO BUTTONS */
+@media screen and (max-width: 680px) {
+  div.container-outer {
+    border: solid black 2px;
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 450px) {
+  nav {
+    height: 40px;
+    width: 100vw;
+  }
+  #all {
+    width: 100vw;
+  }
+  nav a {
+    font-size: 25px;
+    margin: 0;
+    width: 30%;
+    align-content: center;
+    text-align: center;
+  }
+  nav li {
+    margin: auto;
+  }
+  nav ul.nav.navbarnav {
+    width: 100%;
+  }
+  nav ul.nav.navbarnav a[href="#about"] {
+    width: 28%;
+    margin-left: 0;
+  }
+  nav ul.nav.navbarnav a[href="#projects"] {
+    width: 35%;
+    margin: 0 auto;
+  }
+  nav ul.nav.navbarnav a[href="#contact"] {
+    width: 32%;
+    margin-right: 0;
+  }
 }

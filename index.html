@@ -24,13 +24,13 @@
   <nav class="nav navbarnav localer-fluid" id="nav">
     <!-- question, why does text disappear? -->
     <ul class="nav navbarnav">
-      <a href='#about'>
+      <a href='#about' class="col-xs-4">
         <li>About</li>
       </a>
-      <a href='#projects'>
+      <a href='#projects' class="col-xs-4">
         <li>Projects</li>
       </a>
-      <a href='#contact'>
+      <a href='#contact' class="col-xs-4">
         <li>Contact</li>
       </a>
     </ul>
@@ -129,32 +129,58 @@
         </div>
         <div class="row" id="buttons">
           <div class="col-md-3 col-sm-12 ml-auto">
-            <a href="http://www.linkedin.com" target="blank">
-              <button class="btn  btn big">Linked
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              </button>
-            </a>
+            <!-- Linkedin -->
+            <div class="holder">
+              <a href="https://www.linkedin.com/in/matias-marti-433087156/" target="_blank">
+
+                <div class="li-profile">
+                  <div class="member-info">
+                    <h2>
+                      Matias Marti
+                    </h2>
+                    <p>
+                      Stockholms län, Sverige
+                    </p>
+                  </div>
+                  <div>
+                    <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAMAAQDGAAoAAQAAAAAAAA0tAAAAJGRjMzk4ODA4LWJkNjgtNDEzZi04N2MwLTc2Y2Q0Njg3N2U3Ng.jpg"
+                      width="80" height="80" alt="{localized={sv_SE=Matias}, preferredLocale={country=SE, language=sv}} {localized={sv_SE=Marti}, preferredLocale={country=SE, language=sv}}"
+                      class="photo">
+                  </div>
+                </div>
+                <button class="btn btn big">Linked
+                  <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </button>
+              </a>
+            </div>
+
           </div>
           <div class="col-md-3 col-sm-12">
-            <a href="http://www.github.com" target="blank">
-              <button class="btn btn big">Github
-                <i class="fa fa-github-alt" aria-hidden="true"></i>
-              </button>
+            <div class="holder">
 
-            </a>
+              <a href="http://www.github.com" target="blank">
+                <button class="btn btn big">Github
+                  <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </button>
+
+              </a>
+            </div>
           </div>
           <div class="col-md-3 col-sm-12 mr-auto">
-            <a href="http://www.github.com" target="blank">
+            <div class="holder">
+              <a href="http://www.github.com" target="blank">
 
-              <button class="btn btn big">Something Else</button>
-            </a>
+                <button class="btn btn big">Something Else</button>
+              </a>
+            </div>
+
           </div>
-
-
         </div>
 
       </div>
     </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

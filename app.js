@@ -1,16 +1,16 @@
 $(function() {
   //HIGHLIGHT
-  const $hovered = $("a");
+  const $hovered = $("nav a");
   var $background = '<span class="background"></span>';
   $("nav").append($background);
   $background = $("span")[0];
   console.log($background);
-  $("a").addClass("initial-color");
+  $("nav a").addClass("initial-color");
 
   function changeBackground() {
     //remove all classes from a
-    $("a").removeClass();
-    $("a").addClass("initial-color");
+    $("nav a").removeClass();
+    $("nav a").addClass("initial-color");
 
     const gCoords = this.getBoundingClientRect();
     let headerHeight = $("header")[0];
@@ -33,7 +33,7 @@ $(function() {
 
   $hovered.mouseover(changeBackground);
 
-  //SLIDES
+  // ============= SLIDES ============= //
   const $figure = $("figure")[0];
   console.log($figure);
   figure = document.querySelector("figure");
