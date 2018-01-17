@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   //HIGHLIGHT
   const $hovered = $("nav a");
   var $background = '<span class="background"></span>';
@@ -34,23 +34,44 @@ $(function() {
   $hovered.mouseover(changeBackground);
 
   // ============= SLIDES ============= //
-  const $figure = $("figure")[0];
-  console.log($figure);
-  figure = document.querySelector("figure");
+  const figure = document.querySelector("figure");
+  let isSlideshowPaused = false;
+  figure.addEventListener('mouseenter', function () {
+    isSlideshowPaused = true;
+  });
 
+  figure.addEventListener('mouseleave', function () {
+    isSlideshowPaused = false;
+  });
+
+  const numOfSlides = $('div.slide').length;
   //total number of % that has been translated
   let total = 0;
-  window.setInterval(() => {
+  let slideInterval = window.setInterval(function () {
+    // if paused
+    if (isSlideshowPaused) {
+      return;
+    }
     //20% decrease in translateX for every slide
     total -= 20;
     figure.style.transform = `translateX(${total}%)`;
+    if (total === -20 * numOfSlides) {
+      figure.style.transform = `translateX(${0}%)`;
+      total = 0;
+    }
   }, 5000);
 
-  //ADD NICE SCROLL
 
-  $("ul a").on("click", function(e) {
+
+
+
+
+
+  //==============SCROLL =============//
+
+  $("ul a").on("click", function (e) {
     e.preventDefault();
-    $("html, body").stop();
+    $("html, body").stop(true);
     //href in navbar refers to id of container
     const id = $(this).attr("href");
     //position of container
@@ -73,9 +94,16 @@ $(function() {
       adj = 40;
     }
 
-    console.log(finishOffset);
     $("html, body")
-      .animate({ scrollTop: finishOffset + bounce }, diff * 2 + same)
-      .animate({ scrollTop: finishOffset - bounce - adj }, diff + same / 2);
+      .animate({
+        scrollTop: finishOffset + bounce
+      }, diff * 2 + same)
+      .animate({
+        scrollTop: finishOffset - bounce - adj
+      }, diff + same / 2);
   });
+});
+// stop animation on manual scroll
+$(window).on('mousewheel', function (e) {
+  $("html, body").stop(true);
 });
