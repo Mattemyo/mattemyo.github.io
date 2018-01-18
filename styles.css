@@ -68,8 +68,17 @@ nav ul {
   text-shadow: 0px 1px 2px #000;
 }
 
-#buttons div {
+div#buttons{
+  margin: 5% 2% 10%;
+}
+
+div.col-md-4.col-sm-12 {
   padding: 0;
+}
+
+  div.col-md-4.col-sm-12 div.holder {
+  margin: auto;
+  width: 95%;
 }
 
 #all .container {
@@ -84,6 +93,7 @@ nav ul {
   border-bottom: solid #06727e;
   border-bottom: solid #06727e 2.5px;
   border-radius: 12px !important;
+  padding-bottom: 500px;
 }
 
 #all {
