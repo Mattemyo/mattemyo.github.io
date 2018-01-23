@@ -112,6 +112,10 @@ div.col-md-4.col-sm-12 {
   padding: 20px 80px !important;
 }
 
+#projects img {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);
+  border-radius: 3px;
+}
 
 /*  ============ SLIDESHOW ============= */
 
