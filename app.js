@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   //HIGHLIGHT
   const $hovered = $("nav a");
   var $background = '<span class="background"></span>';
@@ -36,18 +36,18 @@ $(function () {
   // ============= SLIDES ============= //
   const figure = document.querySelector("figure");
   let isSlideshowPaused = false;
-  figure.addEventListener('mouseenter', function () {
+  figure.addEventListener("mouseenter", function() {
     isSlideshowPaused = true;
   });
 
-  figure.addEventListener('mouseleave', function () {
+  figure.addEventListener("mouseleave", function() {
     isSlideshowPaused = false;
   });
 
-  const numOfSlides = $('div.slide').length;
+  const numOfSlides = $("div.slide").length;
   //total number of % that has been translated
   let total = 0;
-  let slideInterval = window.setInterval(function () {
+  let slideInterval = window.setInterval(function() {
     // if paused
     if (isSlideshowPaused) {
       return;
@@ -61,15 +61,9 @@ $(function () {
     }
   }, 5000);
 
-
-
-
-
-
-
   //==============SCROLL =============//
 
-  $("ul a").on("click", function (e) {
+  $("ul a").on("click", function(e) {
     e.preventDefault();
     $("html, body").stop(true);
     //href in navbar refers to id of container
@@ -95,15 +89,51 @@ $(function () {
     }
 
     $("html, body")
-      .animate({
-        scrollTop: finishOffset + bounce
-      }, diff * 2 + same)
-      .animate({
-        scrollTop: finishOffset - bounce - adj
-      }, diff + same / 2);
+      .animate(
+        {
+          scrollTop: finishOffset + bounce
+        },
+        diff * 2 + same
+      )
+      .animate(
+        {
+          scrollTop: finishOffset - bounce - adj
+        },
+        diff + same / 2
+      );
   });
 });
 // stop animation on manual scroll
-$(window).on('mousewheel', function (e) {
+$(window).on("mousewheel", function(e) {
   $("html, body").stop(true);
+
+  // ====================  DISPLAY TECHNOLOGIES ON HOVER ==================== //
+
+  $(".listed-project").on("mouseenter", function(e) {
+    e.preventDefault();
+    $(this)
+      .find(".technologies")
+      .stop()
+      .animate(
+        {
+          opacity: 1
+        },
+        500
+      );
+  });
+  $(".listed-project").on("mouseleave", function() {
+    e.preventDefault();
+
+    $(this)
+      .find(".technologies")
+      .stop()
+      .animate(
+        {
+          opacity: 0
+        },
+        500
+      );
+  });
+
+  // docready
 });
