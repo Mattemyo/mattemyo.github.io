@@ -108,7 +108,7 @@ div.col-md-4.col-sm-12 div.holder {
 #projects img {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.103);
   border-radius: 3px;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
 }
 
