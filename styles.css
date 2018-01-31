@@ -30,6 +30,12 @@ header {
   height: 60px;
 }
 
+p a {
+  color: #06727e;
+  opacity: 1;
+  text-shadow: none;
+}
+
 nav {
   font-size: 30px;
   background-color: #308070;
@@ -178,6 +184,7 @@ div.technologies h5 {
   border-top-left-radius: 46px;
   border-top-right-radius: 46px;
   z-index: -1;
+  opacity: 0.9;
 }
 
 .slide p {

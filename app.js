@@ -30,8 +30,12 @@ $(function() {
     $background.style.background = $(".initial-color").css("color");
     $background.style.position = "absolute";
   }
-
-  $hovered.mouseover(changeBackground);
+  // === EVENT DEPENDS ON SIZE OF SCREEN === //
+  let event = "mouseover";
+  if (window.innerWidth <= 1024) {
+    event = "click";
+  }
+  $hovered.on(event, changeBackground);
 
   // ============= SLIDES ============= //
   const figure = document.querySelector("figure");
@@ -59,7 +63,7 @@ $(function() {
       figure.style.transform = `translateX(${0}%)`;
       total = 0;
     }
-  }, 5000);
+  }, 10000);
 
   //==============SCROLL =============//
 
@@ -110,33 +114,36 @@ $(function() {
   // ====================  DISPLAY TECHNOLOGIES ON HOVER OR NOT DEPENDING ON SCREENSIZE ==================== //
   $(window).innerWidth() <= 1024
     ? $(".technologies").css({ opacity: 1 })
-    : function() {
-        $(".listed-project").on("mouseenter", function(e) {
-          e.preventDefault();
-          $(this)
-            .find(".technologies")
-            .stop()
-            .animate(
-              {
-                opacity: 1
-              },
-              500
-            );
-        });
-        $(".listed-project").on("mouseleave", function() {
-          e.preventDefault();
+    : showTech();
 
-          $(this)
-            .find(".technologies")
-            .stop()
-            .animate(
-              {
-                opacity: 0
-              },
-              500
-            );
-        });
-      };
+  function showTech() {
+    $(".listed-project").on("mouseenter", function(e) {
+      e.preventDefault();
+      $(this)
+        .find(".technologies")
+        .stop()
+        .animate(
+          {
+            opacity: 1
+          },
+          500
+        );
+    });
+
+    $(".listed-project").on("mouseleave", function(e) {
+      e.preventDefault();
+
+      $(this)
+        .find(".technologies")
+        .stop()
+        .animate(
+          {
+            opacity: 0
+          },
+          500
+        );
+    });
+  }
 
   // docready
 });
