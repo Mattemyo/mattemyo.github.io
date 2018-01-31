@@ -9,7 +9,14 @@ body {
   font-family: "Montserrat", sans-serif;
   /* Ciada Stripes by Randy Merrill */
   background-color: #026873;
-  background-image: linear-gradient( 90deg, rgba(255, 255, 255, 0.07) 50%, transparent 50%), linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%), linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.07) 50%,
+      transparent 50%
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.19) 50%);
   background-size: 13px, 29px, 37px, 53px;
 }
 
@@ -59,13 +66,15 @@ nav ul {
 }
 
 #buttons button {
-  font-size: 18px;
+  font-size: 22px;
   width: 100%;
   background: #009bc0;
   color: white;
   outline: 0;
   border-radius: 0 0 5px 5px;
   text-shadow: 0px 1px 2px #000;
+  height: 60px;
+  font-size: 25px;
 }
 
 div#buttons {
@@ -135,7 +144,6 @@ div.technologies h5 {
   line-height: 2;
 }
 
-
 /*  ============ SLIDESHOW ============= */
 
 #slideshow {
@@ -180,7 +188,7 @@ div.technologies h5 {
   border-bottom-right-radius: 46px;
   position: absolute;
   bottom: 0;
-  padding: 10px
+  padding: 12px;
 }
 
 #fcc {
@@ -190,7 +198,6 @@ div.technologies h5 {
 .fade {
   animation: fade 1.5s infinite;
 }
-
 
 /* ========= KEYFRAMES ============ */
 
@@ -249,7 +256,6 @@ button {
 i.fa-linkedin-square {
   color: black;
 }
-
 
 /* Flaired edges, by Tomas Theunissen */
 
@@ -326,8 +332,8 @@ div.li-profile {
 
 div.li-profile img {
   margin: 20px;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
 }
 
@@ -335,8 +341,13 @@ div.li-profile h2 {
   line-height: 80px;
 }
 
-
 /* TODO: GIVE BORDERS TO BUTTONS */
+
+@media screen and (min-width: 680px) {
+  div.holder {
+    width: 60%;
+  }
+}
 
 @media screen and (max-width: 680px) {
   div.container-outer {

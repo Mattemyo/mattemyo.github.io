@@ -102,38 +102,41 @@ $(function() {
         diff + same / 2
       );
   });
-});
-// stop animation on manual scroll
-$(window).on("mousewheel", function(e) {
-  $("html, body").stop(true);
-
-  // ====================  DISPLAY TECHNOLOGIES ON HOVER ==================== //
-
-  $(".listed-project").on("mouseenter", function(e) {
-    e.preventDefault();
-    $(this)
-      .find(".technologies")
-      .stop()
-      .animate(
-        {
-          opacity: 1
-        },
-        500
-      );
+  // stop animation on manual scroll
+  $(window).on("mousewheel", function(e) {
+    $("html, body").stop(true);
   });
-  $(".listed-project").on("mouseleave", function() {
-    e.preventDefault();
 
-    $(this)
-      .find(".technologies")
-      .stop()
-      .animate(
-        {
-          opacity: 0
-        },
-        500
-      );
-  });
+  // ====================  DISPLAY TECHNOLOGIES ON HOVER OR NOT DEPENDING ON SCREENSIZE ==================== //
+  $(window).innerWidth() <= 1024
+    ? $(".technologies").css({ opacity: 1 })
+    : function() {
+        $(".listed-project").on("mouseenter", function(e) {
+          e.preventDefault();
+          $(this)
+            .find(".technologies")
+            .stop()
+            .animate(
+              {
+                opacity: 1
+              },
+              500
+            );
+        });
+        $(".listed-project").on("mouseleave", function() {
+          e.preventDefault();
+
+          $(this)
+            .find(".technologies")
+            .stop()
+            .animate(
+              {
+                opacity: 0
+              },
+              500
+            );
+        });
+      };
 
   // docready
 });
