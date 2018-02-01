@@ -9,6 +9,9 @@ $(function() {
 
   function changeBackground() {
     //remove all classes from a
+    if ($(window).innerWidth() <= 640) {
+      return;
+    }
     $("nav a").removeClass();
     $("nav a").addClass("initial-color");
 
@@ -31,11 +34,8 @@ $(function() {
     $background.style.position = "absolute";
   }
   // === EVENT DEPENDS ON SIZE OF SCREEN === //
-  let event = "mouseover";
-  if (window.innerWidth <= 1024) {
-    event = "click";
-  }
-  $hovered.on(event, changeBackground);
+
+  $hovered.on("mouseover", changeBackground);
 
   // ============= SLIDES ============= //
   const figure = document.querySelector("figure");

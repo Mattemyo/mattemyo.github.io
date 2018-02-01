@@ -155,7 +155,7 @@ div.technologies h5 {
 #slideshow {
   overflow: hidden;
   position: relative;
-  height: 60vh;
+  height: 400px;
   width: 100%;
   border-radius: 50px;
   top: -5% !important;
@@ -364,6 +364,16 @@ div.li-profile h2 {
   }
   div.technologies {
     width: 93%;
+  }
+  .bigImg {
+    height: 70%;
+  }
+
+  .slide p {
+    height: 30%;
+  }
+  #slideshow {
+    height: 300px;
   }
 }
 
