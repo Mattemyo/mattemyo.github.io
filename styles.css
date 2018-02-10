@@ -187,11 +187,12 @@ div.individual {
   border-top-left-radius: 46px;
   border-top-right-radius: 46px;
   opacity: 0.95;
-  height: 78%;
+  height: auto;
 }
 div.info {
   min-width: 100%;
-  height: 22%;
+  height: auto;
+  vertical-align: middle;
 }
 .slide p {
   width: 100%;
@@ -199,8 +200,8 @@ div.info {
   background: rgba(71, 132, 132, 0.2);
   border-bottom-left-radius: 46px;
   border-bottom-right-radius: 46px;
-  padding: 30px;
-  padding-top: 12px;
+  margin: auto;
+  padding-left: 15px;
   line-height: 2;
 }
 
