@@ -135,12 +135,12 @@ div.listed-project {
 div.technologies {
   position: relative;
   bottom: 50px;
-  background: rgba(7, 115, 127, 0.966);
+  background: rgba(7, 115, 127, 1);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   max-width: 100%;
   opacity: 0;
-  width: 95%;
+  min-width: 96%;
   margin: auto;
   vertical-align: middle;
   padding-top: 5px;
