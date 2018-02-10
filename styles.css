@@ -129,7 +129,7 @@ div.col-md-4.col-sm-12 div.holder {
 
 div.listed-project {
   height: 200px;
-  margin-bottom: 20%;
+  margin-bottom: 25%;
 }
 
 div.technologies {
@@ -148,6 +148,10 @@ div.technologies {
 
 div.technologies h5 {
   line-height: 2;
+}
+
+div.individual {
+  margin: 20px 0;
 }
 
 /*  ============ SLIDESHOW ============= */
@@ -169,7 +173,6 @@ div.technologies h5 {
 }
 
 #slideshow figure {
-  
   position: relative;
   width: 500%;
   height: 100%;
@@ -288,6 +291,7 @@ div.col-md-5 {
   padding: auto;
 }
 
+/* Horizontal rules */
 #horizon1::before,
 #horizon2::before,
 #horizon3::before {
@@ -301,6 +305,16 @@ div.col-md-5 {
   border-width: 0 0 1px 0;
   border-radius: 20px;
   z-index: 500;
+}
+
+hr.project-hr {
+  height: 1px;
+  width: 90%;
+  margin: 30px auto;
+  background-image: -webkit-linear-gradient(left, #699d85, #0f7785, #699d85);
+  background-image: -moz-linear-gradient(left, #699d85, #0f7785, #699d85);
+  background-image: -ms-linear-gradient(left, #699d85, #0f7785, #699d85);
+  background-image: -o-linear-gradient(left, #699d85, #0f7785, #699d85);
 }
 
 div.holder {
