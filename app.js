@@ -8,7 +8,7 @@ $(function() {
   $("nav a").addClass("initial-color");
 
   function changeBackground() {
-    //remove all classes from a
+    //remove all classes from a depending on screen size
     if ($(window).innerWidth() <= 640) {
       return;
     }
@@ -97,13 +97,13 @@ $(function() {
         {
           scrollTop: finishOffset + bounce
         },
-        diff * 2 + same
+        diff * 0.5 + same
       )
       .animate(
         {
           scrollTop: finishOffset - bounce - adj
         },
-        diff + same / 2
+        diff * 0.2 + same / 2
       );
   });
   // stop animation on manual scroll
