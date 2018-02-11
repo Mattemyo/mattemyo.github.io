@@ -419,3 +419,22 @@ div.li-profile h2 {
     margin-right: 0;
   }
 }
+
+/* STYLE SCROLLBAR */
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: #09747f;
+  opacity: 0.2;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #308070;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
