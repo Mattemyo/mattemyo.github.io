@@ -140,7 +140,7 @@ div.technologies {
   border-bottom-right-radius: 3px;
   max-width: 100%;
   opacity: 0;
-  min-width: 96%;
+  width: 90%;
   margin: auto;
   vertical-align: middle;
   padding-top: 5px;
@@ -319,6 +319,11 @@ hr.project-hr {
   background-image: -ms-linear-gradient(left, #699d85, #0f7785, #699d85);
   background-image: -o-linear-gradient(left, #699d85, #0f7785, #699d85);
 }
+div.project-image {
+  max-width: 90%;
+  padding: 0;
+  margin: 0 auto;
+}
 
 div.holder {
   background: rgba(30, 100, 200, 0.2);
@@ -379,9 +384,6 @@ div.li-profile h2 {
     border: solid black 2px;
     width: 80%;
     margin: auto;
-  }
-  div.technologies {
-    width: 85%;
   }
 }
 
