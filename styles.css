@@ -60,7 +60,10 @@ nav li {
   opacity: 0.8;
   font-weight: 300;
 }
-
+div.spacer {
+  width: 100%;
+  height: 5vw;
+}
 #contact {
   height: 100vh;
   padding: 30%;
@@ -95,6 +98,10 @@ div.col-md-4.col-sm-12 div.holder {
   margin: auto;
   width: 95%;
 }
+div.col-lg-6 {
+  margin: 60px 0;
+}
+
 
 #all .container {
   background: hsl(151, 21%, 52%);
@@ -313,7 +320,7 @@ div.col-md-5 {
 hr.project-hr {
   height: 1px;
   width: 90%;
-  margin: 30px auto;
+  margin: 15px auto;
   background-image: -webkit-linear-gradient(left, #699d85, #0f7785, #699d85);
   background-image: -moz-linear-gradient(left, #699d85, #0f7785, #699d85);
   background-image: -ms-linear-gradient(left, #699d85, #0f7785, #699d85);
